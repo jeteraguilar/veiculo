@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+	<style type="text/CSS" rel="stylesheet">
+					table{width:99%; border: solid 2px;}td{text-align: center;
+						width:50%; border:solid 1px;}
+						th{text-align: center; border:solid 1px;}
+				</style>
+		</head>
+		<body>
+			<table>
+				<thead>
+					<th colspan="1">
+					<h1>Dados do Veículo</h1>
+					</th>
+				</thead>
+				<tbody>
+				
+					
+						<td>
+					         <h1>Placa:<span th:text="${veiculo.placa}" /></h1>
+						</td>
+						</tr>
+						<tr>
+						
+						<td>
+							<h1>Marca:	<span th:text="${veiculo.marca}" /></h1>
+						</td>
+					</tr>
+					<tr>
+					
+						<td>
+						 <h1>Modelo:	<span th:text="${veiculo.modelo}" /></h1>
+						</td>
+						</tr>
+						<tr>
+					
+						<td>
+						<h1>Ano:	<span th:text="${veiculo.ano}" /></h1>
+						</td>
+						</tr>
+						<tr>
+					
+						<td>
+						<h1>Combustivel:	<span th:text="${veiculo.combustivel}" /></h1>
+						</td>
+						</tr>
+						<tr>
+					
+						<td>
+						<h1>kilometragem:	<span th:text="${veiculo.kilometragem}" /></h1>
+						</td>
+						</tr>
+						
+				</tbody>
+			</table>
+		</body>
+<html>
+
+
+	
