@@ -1,13 +1,13 @@
 package labs.mongodb.veiculos.model;
 
-import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
+
 @Document("Veiculos")
 public class Veiculos {
 
 	@Id
-	public ObjectId _id;
+	public String id;
 
 	private String placa;
 	private String marca;
@@ -15,25 +15,27 @@ public class Veiculos {
 	private Integer ano;
 	private String combustivel;
 	private Integer kilometragem;
-	public Veiculos() {
+	
+//	public Veiculos() {
+//	}
+//
+//	public Veiculos(String id, String placa, String marca, String modelo, Integer ano, String combustivel, Integer kilometragem ) {
+//		this.id = id;
+//		this.placa = placa;
+//		this.marca = marca;
+//		this.modelo = modelo;
+//		this.ano = ano;
+//		this.combustivel = combustivel;
+//		this.kilometragem = kilometragem;
+//	}
+
+
+	public String getId() {
+		return id;
 	}
 
-	public Veiculos(ObjectId _id, String placa, String marca, String modelo, Integer ano, String combustivel, Integer kilometragem ) {
-		this._id = _id;
-		this.placa = placa;
-		this.marca = marca;
-		this.modelo = modelo;
-		this.ano = ano;
-		this.combustivel = combustivel;
-		this.kilometragem = kilometragem;
-	}
-
-	public ObjectId get_id() {
-		return _id;
-	}
-
-	public void set_id(ObjectId _id) {
-		this._id = _id;
+	public void setId(String id) {
+		this.id = id;
 	}
 
 	public String getPlaca() {
